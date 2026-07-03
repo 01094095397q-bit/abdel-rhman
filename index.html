@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>المحامي عبدالرحمن عبدالصبور | مكتب محاماة واستشارات قانونية</title>
+<meta name="description" content="مكتب المحامي عبدالرحمن عبدالصبور - خبرة قانونية متميزة في القضايا الجنائية والتجارية والأحوال الشخصية والعقارية" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/amiri@5.0.8/index.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/cairo@5.0.8/index.min.css" />
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy: { 900: '#0a1929', 800: '#112240', 700: '#1a2f47', 600: '#233d5a' },
+        gold: { 400: '#d4b978', 500: '#c9a961', 600: '#a88a42' },
+        cream: '#f5f1e8'
+      },
+      fontFamily: {
+        amiri: ['Amiri', 'serif'],
+        cairo: ['Cairo', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  * { scroll-behavior: smooth; }
+  body { font-family: 'Cairo', sans-serif; background: #f5f1e8; color: #1a1a1a; overflow-x: hidden; }
+  .font-amiri { font-family: 'Amiri', serif; }
+  .gold-gradient { background: linear-gradient(135deg, #d4b978 0%, #c9a961 50%, #a88a42 100%); }
+  .navy-gradient { background: linear-gradient(135deg, #0a1929 0%, #112240 100%); }
+  .text-gold-gradient { background: linear-gradient(135deg, #d4b978, #c9a961); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .section-fade { opacity: 0; transform: translateY(40px); transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1); }
+  .section-fade.visible { opacity: 1; transform: translateY(0); }
+  .service-card { transition: all 0.4s ease; }
+  .service-card:hover { transform: translateY(-12px); box-shadow: 0 25px 50px -12px rgba(10, 25, 41, 0.25); }
+  .service-card:hover .service-icon { transform: rotateY(180deg); }
+  .service-icon { transition: transform 0.6s ease; }
+  .nav-link { position: relative; }
+  .nav-link::after { content: ''; position: absolute; bottom: -4px; right: 0; width: 0; height: 2px; background: #c9a961; transition: width 0.3s; }
+  .nav-link:hover::after { width: 100%; }
+  .hero-pattern { background-image: radial-gradient(circle at 20% 50%, rgba(201, 169, 97, 0.08) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(201, 169, 97, 0.05) 0%, transparent 50%); }
+  .divider { width: 80px; height: 3px; background: linear-gradient(90deg, transparent, #c9a961, transparent); }
+  .pulse-gold { animation: pulseGold 2s infinite; }
+  @keyframes pulseGold { 0%, 100% { box-shadow: 0 0 0 0 rgba(201, 169, 97, 0.6); } 50% { box-shadow: 0 0 0 15px rgba(201, 169, 97, 0); } }
+  .float { animation: float 6s ease-in-out infinite; }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  .counter { font-variant-numeric: tabular-nums; }
+  .testimonial-card { transition: all 0.4s ease; }
+  .testimonial-card:hover { transform: scale(1.02); }
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: #0a1929; }
+  ::-webkit-scrollbar-thumb { background: #c9a961; border-radius: 5px; }
+  .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
+  .faq-answer.open { max-height: 500px; }
+  .faq-icon { transition: transform 0.3s; }
+  .faq-item.active .faq-icon { transform: rotate(45deg); }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- Navigation -->
+<nav id="navbar" class="fixed top-0 right-0 left-0 z-50 transition-all duration-500 bg-transparent">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#home" class="flex items-center gap-3">
+      <div class="w-12 h-12 rounded-lg gold-gradient flex items-center justify-center shadow-lg">
+        <svg class="w-7 h-7 text-navy-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7v2h20V7L12 2zM4 11v7h2v-7H4zm6 0v7h2v-7h-2zm6 0v7h2v-7h-2zM2 20v2h20v-2H2z"/></svg>
+      </div>
+      <div>
+        <div class="text-white font-bold text-lg leading-tight">عبدالرحمن عبدالصبور</div>
+        <div class="text-gold-500 text-xs">محامٍ ومستشار قانوني</div>
+      </div>
+    </a>
+    <div class="hidden lg:flex items-center gap-8">
+      <a href="#home" class="nav-link text-white hover:text-gold-500 transition">الرئيسية</a>
+      <a href="#about" class="nav-link text-white hover:text-gold-500 transition">من نحن</a>
+      <a href="#services" class="nav-link text-white hover:text-gold-500 transition">التخصصات</a>
+      <a href="#why" class="nav-link text-white hover:text-gold-500 transition">لماذا نحن</a>
+      <a href="#testimonials" class="nav-link text-white hover:text-gold-500 transition">آراء العملاء</a>
+      <a href="#faq" class="nav-link text-white hover:text-gold-500 transition">الأسئلة الشائعة</a>
+      <a href="#contact" class="nav-link text-white hover:text-gold-500 transition">اتصل بنا</a>
+    </div>
+    <a href="#contact" class="hidden lg:inline-flex gold-gradient text-navy-900 px-6 py-2.5 rounded-lg font-bold hover:shadow-xl hover:shadow-gold-500/30 transition">
+      احجز استشارة
+    </a>
+    <button id="mobileBtn" class="lg:hidden text-white">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="lg:hidden hidden navy-gradient border-t border-gold-500/20">
+    <div class="px-6 py-4 flex flex-col gap-4">
+      <a href="#home" class="text-white hover:text-gold-500">الرئيسية</a>
+      <a href="#about" class="text-white hover:text-gold-500">من نحن</a>
+      <a href="#services" class="text-white hover:text-gold-500">التخصصات</a>
+      <a href="#why" class="text-white hover:text-gold-500">لماذا نحن</a>
+      <a href="#testimonials" class="text-white hover:text-gold-500">آراء العملاء</a>
+      <a href="#faq" class="text-white hover:text-gold-500">الأسئلة الشائعة</a>
+      <a href="#contact" class="text-white hover:text-gold-500">اتصل بنا</a>
+      <a href="#contact" class="gold-gradient text-navy-900 px-6 py-2.5 rounded-lg font-bold text-center">احجز استشارة</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="relative min-h-screen flex items-center navy-gradient hero-pattern overflow-hidden pt-24">
+  <div class="absolute top-20 left-10 w-72 h-72 bg-gold-500/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-20 right-10 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl"></div>
+  <div class="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+    <div class="text-white">
+      <div class="inline-flex items-center gap-2 gold-gradient text-navy-900 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
+        <span class="w-2 h-2 rounded-full bg-navy-900 pulse-gold"></span>
+        خبرة قانونية تمتد لأكثر من 10 أعوام
+      </div>
+      <h1 class="font-amiri text-5xl lg:text-7xl font-bold leading-tight mb-6">
+        المحامي<br>
+        <span class="text-gold-gradient">عبدالرحمن عبدالصبور</span>
+      </h1>
+      <p class="text-xl lg:text-2xl text-gray-300 mb-4 font-amiri">محامٍ أمام محكمة النقض والدستورية العليا</p>
+      <p class="text-gray-400 text-lg mb-8 leading-relaxed max-w-xl">
+        نقدم لعملائنا خدمات قانونية متكاملة بأعلى معايير الاحترافية والسرية، مع التزام كامل بتحقيق العدالة وحماية الحقوق في مختلف فروع القانون.
+      </p>
+      <div class="flex flex-wrap gap-4 mb-10">
+        <a href="#contact" class="gold-gradient text-navy-900 px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl hover:shadow-gold-500/40 transition flex items-center gap-2">
+          احجز استشارتك الآن
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        </a>
+        <a href="#services" class="border-2 border-gold-500 text-gold-500 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gold-500 hover:text-navy-900 transition">
+          تعرف على خدماتنا
+        </a>
+      </div>
+      <div class="flex flex-wrap gap-8 pt-8 border-t border-white/10">
+        <div>
+          <div class="text-3xl font-bold text-gold-500 counter" data-target="10">0</div>
+          <div class="text-gray-400 text-sm">عاماً من الخبرة</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-gold-500 counter" data-target="1500">0</div>
+          <div class="text-gray-400 text-sm">قضية ناجحة</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-gold-500 counter" data-target="98">0</div>
+          <div class="text-gray-400 text-sm">% نسبة رضا العملاء</div>
+        </div>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="absolute -inset-4 gold-gradient rounded-3xl blur-2xl opacity-20"></div>
+      <div class="relative rounded-3xl overflow-hidden shadow-2xl float">
+        <img src="https://image.qwenlm.ai/public_source/3b89772a-a70b-4dcb-91bd-417151a26b0a/1433b5095-a059-461c-a02c-38aea45561c1.png" alt="المحامي عبدالرحمن عبدالصبور" class="w-full h-auto" />
+        <div class="absolute bottom-0 right-0 left-0 bg-gradient-to-t from-navy-900 via-navy-900/80 to-transparent p-6">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-full gold-gradient flex items-center justify-center">
+              <svg class="w-6 h-6 text-navy-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7v2h20V7L12 2zM4 11v7h2v-7H4zm6 0v7h2v-7h-2zm6 0v7h2v-7h-2zM2 20v2h20v-2H2z"/></svg>
+            </div>
+            <div>
+              <div class="text-white font-bold">مكتب عبدالصبور للمحاماة</div>
+              <div class="text-gold-500 text-sm">نقابة المحامين المصرية</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="absolute -top-6 -right-6 gold-gradient text-navy-900 rounded-2xl p-4 shadow-xl float" style="animation-delay: 1s;">
+        <div class="text-3xl font-bold">+10</div>
+        <div class="text-xs font-bold">عام خبرة</div>
+      </div>
+      <div class="absolute -bottom-6 -left-6 bg-white text-navy-900 rounded-2xl p-4 shadow-xl float" style="animation-delay: 2s;">
+        <div class="flex items-center gap-2">
+          <svg class="w-6 h-6 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <div>
+            <div class="font-bold">4.9/5</div>
+            <div class="text-xs text-gray-600">تقييم العملاء</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-24 bg-cream">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16 section-fade">
+      <div class="text-gold-500 font-bold mb-3 tracking-wider">نبذة تعريفية</div>
+      <h2 class="font-amiri text-4xl lg:text-5xl font-bold text-navy-900 mb-4">من هو المحامي عبدالرحمن عبدالصبور؟</h2>
+      <div class="divider mx-auto"></div>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="section-fade">
+        <div class="relative">
+          <div class="absolute -inset-4 gold-gradient rounded-3xl blur-xl opacity-20"></div>
+          <img src="https://image.qwenlm.ai/public_source/3b89772a-a70b-4dcb-91bd-417151a26b0a/11eaa905b-5d58-4716-a4fb-29024743dd40.png" alt="مكتب المحاماة" class="relative rounded-3xl shadow-2xl w-full" />
+          <div class="absolute -bottom-6 -right-6 bg-navy-900 text-white p-6 rounded-2xl shadow-xl">
+            <div class="text-gold-500 font-bold text-4xl mb-1">2015</div>
+            <div class="text-sm">سنة التأسيس</div>
+          </div>
+        </div>
+      </div>
+      <div class="section-fade">
+        <h3 class="font-amiri text-3xl font-bold text-navy-900 mb-6">مسيرة مهنية حافلة بالإنجازات</h3>
+        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+          المحامي <span class="font-bold text-gold-600">عبدالرحمن عبدالصبور</span> هو محامٍ مصري بارز، حاصل على ليسانس الحقوق من جامعة القاهرة بتقدير امتياز مع مرتبة الشرف، وعضو نقابة المحامين المصرية منذ عام 2015.
+        </p>
+        <p class="text-gray-700 text-lg leading-relaxed mb-8">
+          يتمتع بخبرة واسعة تمتد لأكثر من عشر سنوات في مختلف فروع القانون، وقد ترافع أمام جميع درجات التقاضي بما فيها محكمة النقض والمحكمة الدستورية العليا، مما أكسبه سمعة متميزة في الأوساط القانونية.
+        </p>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-lg gold-gradient flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-navy-900" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+            </div>
+            <div>
+              <div class="font-bold text-navy-900">ماجستير في القانون العام والخاص</div>
+              <div class="text-sm text-gray-600">جامعة قنا</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-lg gold-gradient flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-navy-900" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+            </div>
+            <div>
+              <div class="font-bold text-navy-900">عضو نقابة المحامين</div>
+              <div class="text-sm text-gray-600">منذ 2015</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-lg gold-gradient flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-navy-900" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+            </div>
+            <div>
+              <div class="font-bold text-navy-900">محامٍ بالنقض</div>
+              <div class="text-sm text-gray-600">الدستورية العليا</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-lg gold-gradient flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-navy-900" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+            </div>
+            <div>
+              <div class="font-bold text-navy-900">مستشار قانوني</div>
+              <div class="text-sm text-gray-600">لشركات كبرى</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-24 navy-gradient relative overflow-hidden">
+  <div class="absolute top-0 left-0 w-full h-full opacity-5">
+    <div class="absolute top-20 left-20 w-64 h-64 border border-gold-500 rounded-full"></div>
+    <div class="absolute bottom-20 right-20 w-96 h-96 border border-gold-500 rounded-full"></div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="text-center mb-16 section-fade">
+      <div class="text-gold-500 font-bold mb-3 tracking-wider">مجالات التخصص</div>
+      <h2 class="font-amiri text-4xl lg:text-5xl font-bold text-white mb-4">خدماتنا القانونية</h2>
+      <div class="divider mx-auto"></div>
+      <p class="text-gray-400 mt-6 max-w-2xl mx-auto text-lg">نقدم مجموعة شاملة من الخدمات القانونية المتخصصة لتلبية كافة احتياجات عملائنا</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Service 1 -->
+      <div class="service-card bg-navy-800 border border-gold-500/10 rounded-2xl p-8 section-fade">
+        <div class="service-icon w-16 h-16 rounded-xl gold-gradient flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-navy-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7v2h20V7L12 2zM4 11v7h2v-7H4zm6 0v7h2v-7h-2zm6 0v7h2v-7h-2zM2 20v2h20v-2H2z"/></svg>
+        </div>
+        <h3 class="text-white font-bold text-xl mb-3">القانون الجنائي</h3>
+        <p class="text-gray-400 leading-relaxed mb-4">الدفاع في القضايا الجنائية بجميع درجات التقاضي، من الجنايات والجنح إلى الطعون أمام محكمة النقض.</p>
+        <ul class="text-gray-500 text-sm space-y-1">
+          <li>• قضايا الجنايات والجنح</li>
+          <li>• قضايا الأموال العامة</li>
+          <li>• الطعون أمام النقض</li>
+        </ul>
+      </div>
+      <!-- Service 2 -->
+      <div class="service-card bg-navy-800 border border-gold-500/10 rounded-2xl p-8 section-fade">
+        <div class="service-icon w-16 h-16 rounded-xl gold-gradient flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-navy-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+        </div>
+        <h3 class="text-white font-bold text-xl mb-3">الأحوال الشخصية</h3>
+        <p class="text-gray-400 leading-relaxed mb-4">قضايا الأسرة والطلاق والخلع والنفقة والحضانة والميراث والوصاية بكفاءة عالية وحساسية تامة.</p>
+        <ul class="text-gray-500 text-sm space-y-1">
+          <li>• قضايا الطلاق والخلع</li>
+          <li>• النفقة والحضانة</li>
+          <li>• الميراث والتركات</li>
+        </ul>
+      </div>
+      <!-- Service 3 -->
+      <div class="service-card bg-navy-800 border border-gold-500/10 rounded-2xl p-8 section-fade">
+        <div class="service-icon w-16 h-16 rounded-xl gold-gradient flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-navy-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+        </div>
+        <h3 class="text-white font-bold text-xl mb-3">القانون التجاري</h3>
+        <p class="text-gray-400 leading-relaxed mb-4">تأسيس الشركات وصياغة العقود التجارية وحل النزاعات التجارية وقضايا الإفلاس والتصفية.</p>
+        <ul class="text-gray-500 text-sm space-y-1">
+          <li>• تأسيس الشركات</li>
+          <li>• صياغة العقود</li>
+          <li>• المنازعات التجارية</li>
+        </ul>
+      </div>
+      <!-- Service 4 -->
+      <div class="service-card bg-navy-800 border border-gold-500/10 rounded-2xl p-8 section-fade">
+        <div class="service-icon w-16 h-16 rounded-xl gold-gradient flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-navy-900" fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        </div>
+        <h3 class="text-white font-bold text-xl mb-3">القانون العقاري</h3>
+        <p class="text-gray-400 leading-relaxed mb-4">قضايا الملكية والعقارات والإيجارات والبناء والتسجيل العقاري وحماية حقوق الملاك والمستأجرين.</p>
+        <ul class="text-gray-500 text-sm space-y-1">
+          <li>• عقود البيع والشراء</li>
+          <li>• قضايا الإخلاء</li>
+          <li>• التسجيل العقاري</li>
+        </ul>
+      </div>
+      <!-- Service 5 -->
+      <div class="service-card bg-navy-800 border border-gold-500/10 rounded-2xl p-8 section-fade">
+        <div class="service-icon w-16 h-16 rounded-xl gold-gradient flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-navy-900" fill="currentColor" viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+        </div>
+        <h3 class="text-white font-bold text-xl mb-3">القانون العمالي</h3>
+        <p class="text-gray-400 leading-relaxed mb-4">حماية حقوق العمال وأصحاب العمل، صياغة عقود العمل، وقضايا الفصل التعسفي والتعويضات.</p>
+        <ul class="text-gray-500 text-sm space-y-1">
+          <li>• عقود العمل</li>
+          <li>• الفصل التعسفي</li>
+          <li>• التعويضات العمالية</li>
+        </ul>
+      </div>
+      <!-- Service 6 -->
+      <div class="service-card bg-navy-800 border border-gold-500/10 rounded-2xl p-8 section-fade">
+        <div class="service-icon w-16 h-16 rounded-xl gold-gradient flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-navy-900" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+        </div>
+        <h3 class="text-white font-bold text-xl mb-3">القانون الإداري</h3>
+        <p class="text-gray-400 leading-relaxed mb-4">الطعن في القرارات الإدارية، قضايا الموظفين العموميين، والمنازعات أمام محاكم القضاء الإداري.</p>
+        <ul class="text-gray-500 text-sm space-y-1">
+          <li>• الطعن في القرارات</li>
+          <li>• قضايا الموظفين</li>
+          <li>• التعويضات الإدارية</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-16 gold-gradient">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="text-center section-fade">
+        <div class="text-navy-900 text-5xl font-bold counter mb-2" data-target="1500">0</div>
+        <div class="text-navy-800 font-bold">قضية ناجحة</div>
+      </div>
+      <div class="text-center section-fade">
+        <div class="text-navy-900 text-5xl font-bold counter mb-2" data-target="800">0</div>
+        <div class="text-navy-800 font-bold">عميل سعيد</div>
+      </div>
+      <div class="text-center section-fade">
+        <div class="text-navy-900 text-5xl font-bold counter mb-2" data-target="10">0</div>
+        <div class="text-navy-800 font-bold">أعوام من الخبرة</div>
+      </div>
+      <div class="text-center section-fade">
+        <div class="text-navy-900 text-5xl font-bold counter mb-2" data-target="15">0</div>
+        <div class="text-navy-800 font-bold">جائزة تميز</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section id="why" class="py-24 bg-cream">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16 section-fade">
+      <div class="text-gold-500 font-bold mb-3 tracking-wider">مميزاتنا</div>
+      <h2 class="font-amiri text-4xl lg:text-5xl font-bold text-navy-900 mb-4">لماذا تختار مكتبنا?</h2>
+      <div class="divider mx-auto"></div>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="section-fade order-2 lg:order-1">
+        <div class="space-y-6">
+          <div class="flex gap-5 bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+            <div class="w-14 h-14 rounded-xl gold-gradient flex items-center justify-center flex-shrink-0">
+              <svg class="w-7 h-7 text-navy-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-navy-900 text-xl mb-2">السرية التامة</h3>
+              <p class="text-gray-600">نلتزم بأعلى معايير السرية المهنية في التعامل مع جميع قضايا عملائنا ومعلوماتهم.</p>
+            </div>
+          </div>
+          <div class="flex gap-5 bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+            <div class="w-14 h-14 rounded-xl gold-gradient flex items-center justify-center flex-shrink-0">
+              <svg class="w-7 h-7 text-navy-900" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-navy-900 text-xl mb-2">السرعة في الإنجاز</h3>
+              <p class="text-gray-600">نحرص على إنجاز القضايا في أسرع وقت ممكن مع الحفاظ على جودة العمل القانوني.</p>
+            </div>
+          </div>
+          <div class="flex gap-5 bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+            <div class="w-14 h-14 rounded-xl gold-gradient flex items-center justify-center flex-shrink-0">
+              <svg class="w-7 h-7 text-navy-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-navy-900 text-xl mb-2">نسبة نجاح عالية</h3>
+              <p class="text-gray-600">نفتخر بنسبة نجاح تصل إلى 98% في القضايا التي نتولاها بفضل خبرتنا الطويلة.</p>
+            </div>
+          </div>
+          <div class="flex gap-5 bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+            <div class="w-14 h-14 rounded-xl gold-gradient flex items-center justify-center flex-shrink-0">
+              <svg class="w-7 h-7 text-navy-900" fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-navy-900 text-xl mb-2">استشارات على مدار الساعة</h3>
+              <p class="text-gray-600">فريقنا متاح للرد على استفساراتكم وتقديم الاستشارات القانونية في أي وقت.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-fade order-1 lg:order-2">
+        <div class="relative">
+          <div class="absolute -inset-4 gold-gradient rounded-3xl blur-2xl opacity-20"></div>
+          <img src="https://image.qwenlm.ai/public_source/3b89772a-a70b-4dcb-91bd-417151a26b0a/11eaa905b-5d58-4716-a4fb-29024743dd40.png" alt="مكتب المحاماة" class="relative rounded-3xl shadow-2xl w-full" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process Section -->
+<section class="py-24 navy-gradient">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16 section-fade">
+      <div class="text-gold-500 font-bold mb-3 tracking-wider">آلية العمل</div>
+      <h2 class="font-amiri text-4xl lg:text-5xl font-bold text-white mb-4">كيف نعمل معك؟</h2>
+      <div class="divider mx-auto"></div>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="relative section-fade">
+        <div class="bg-navy-800 border border-gold-500/20 rounded-2xl p-8 h-full">
+          <div class="absolute -top-4 right-8 w-10 h-10 rounded-full gold-gradient flex items-center justify-center text-navy-900 font-bold">1</div>
+          <h3 class="text-white font-bold text-xl mb-3 mt-4">التواصل الأولي</h3>
+          <p class="text-gray-400">تواصل معنا عبر الهاتف أو النموذج أو الواتساب لشرح قضيتك بشكل مبدئي.</p>
+        </div>
+      </div>
+      <div class="relative section-fade">
+        <div class="bg-navy-800 border border-gold-500/20 rounded-2xl p-8 h-full">
+          <div class="absolute -top-4 right-8 w-10 h-10 rounded-full gold-gradient flex items-center justify-center text-navy-900 font-bold">2</div>
+          <h3 class="text-white font-bold text-xl mb-3 mt-4">الاستشارة القانونية</h3>
+          <p class="text-gray-400">نقدم لك استشارة شاملة نوضح فيها موقفك القانوني والخيارات المتاحة.</p>
+        </div>
+      </div>
+      <div class="relative section-fade">
+        <div class="bg-navy-800 border border-gold-500/20 rounded-2xl p-8 h-full">
+          <div class="absolute -top-4 right-8 w-10 h-10 rounded-full gold-gradient flex items-center justify-center text-navy-900 font-bold">3</div>
+          <h3 class="text-white font-bold text-xl mb-3 mt-4">وضع الخطة</h3>
+          <p class="text-gray-400">نضع استراتيجية قانونية محكمة ونوقع عقد التوكيل بالاتفاق على الأتعاب.</p>
+        </div>
+      </div>
+      <div class="relative section-fade">
+        <div class="bg-navy-800 border border-gold-500/20 rounded-2xl p-8 h-full">
+          <div class="absolute -top-4 right-8 w-10 h-10 rounded-full gold-gradient flex items-center justify-center text-navy-900 font-bold">4</div>
+          <h3 class="text-white font-bold text-xl mb-3 mt-4">التنفيذ والمتابعة</h3>
+          <p class="text-gray-400">نباشر إجراءات قضيتك ونطلعك على كل المستجدات حتى تحقيق النتيجة المرجوة.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials" class="py-24 bg-cream">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16 section-fade">
+      <div class="text-gold-500 font-bold mb-3 tracking-wider">شهادات العملاء</div>
+      <h2 class="font-amiri text-4xl lg:text-5xl font-bold text-navy-900 mb-4">ماذا يقول عملاؤنا عنا؟</h2>
+      <div class="divider mx-auto"></div>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="testimonial-card bg-white rounded-2xl p-8 shadow-lg section-fade">
+        <div class="flex gap-1 mb-4">
+          <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="text-gray-700 mb-6 leading-relaxed">"تعاملت مع الأستاذ عبدالرحمن في قضية تجارية معقدة، وأبهرني بمستواه المهني العالي والتزامه الكامل. أنصح بالتعامل معه بشدة."</p>
+        <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+          <div class="w-12 h-12 rounded-full gold-gradient flex items-center justify-center text-navy-900 font-bold">أم</div>
+          <div>
+            <div class="font-bold text-navy-900">أحمد محمود</div>
+            <div class="text-sm text-gray-500">رجل أعمال</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card bg-white rounded-2xl p-8 shadow-lg section-fade">
+        <div class="flex gap-1 mb-4">
+          <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="text-gray-700 mb-6 leading-relaxed">"ساعدني الأستاذ عبدالرحمن في قضية أحوال شخصية كانت تبدو مستحيلة، وحصلت على جميع حقوقي بفضل الله ثم بفضل كفاءته وخبرته."</p>
+        <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+          <div class="w-12 h-12 rounded-full gold-gradient flex items-center justify-center text-navy-900 font-bold">سع</div>
+          <div>
+            <div class="font-bold text-navy-900">سارة عبدالله</div>
+            <div class="text-sm text-gray-500">معلمة</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card bg-white rounded-2xl p-8 shadow-lg section-fade">
+        <div class="flex gap-1 mb-4">
+          <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="text-gray-700 mb-6 leading-relaxed">"محامٍ محترف ومتميز، يتعامل مع قضايا العقارات باحترافية عالية. ساعدني في استرداد عقار كنت أظن أنه ضاع للأبد. شكراً جزيلاً."</p>
+        <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+          <div class="w-12 h-12 rounded-full gold-gradient flex items-center justify-center text-navy-900 font-bold">مح</div>
+          <div>
+            <div class="font-bold text-navy-900">محمد حسن</div>
+            <div class="text-sm text-gray-500">مستثمر عقاري</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="py-24 bg-white">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-center mb-16 section-fade">
+      <div class="text-gold-500 font-bold mb-3 tracking-wider">الأسئلة الشائعة</div>
+      <h2 class="font-amiri text-4xl lg:text-5xl font-bold text-navy-900 mb-4">إجابات لأهم استفساراتك</h2>
+      <div class="divider mx-auto"></div>
+    </div>
+    <div class="space-y-4 section-fade">
+      <div class="faq-item border border-gray-200 rounded-2xl overflow-hidden">
+        <button class="faq-btn w-full flex items-center justify-between p-6 text-right hover:bg-cream transition">
+          <span class="font-bold text-navy-900 text-lg">كيف يمكنني حجز استشارة قانونية؟</span>
+          <span class="faq-icon text-gold-500 text-2xl">+</span>
+        </button>
+        <div class="faq-answer px-6">
+          <p class="text-gray-600 pb-6">يمكنك حجز استشارة عبر الاتصال بنا مباشرة على الأرقام الموضحة، أو ملء نموذج الاتصال في الموقع، أو عبر الواتساب. سنرد عليك في أقرب وقت لتحديد موعد مناسب.</p>
+        </div>
+      </div>
+      <div class="faq-item border border-gray-200 rounded-2xl overflow-hidden">
+        <button class="faq-btn w-full flex items-center justify-between p-6 text-right hover:bg-cream transition">
+          <span class="font-bold text-navy-900 text-lg">ما هي تكلفة الاستشارة القانونية؟</span>
+          <span class="faq-icon text-gold-500 text-2xl">+</span>
+        </button>
+        <div class="faq-answer px-6">
+          <p class="text-gray-600 pb-6">تختلف تكلفة الاستشارة حسب نوع القضية وتعقيدها. نقدم استشارة أولية مجانية لتقييم قضيتك، وبعدها نوضح لك التكاليف بشكل شفاف قبل البدء في أي إجراءات.</p>
+        </div>
+      </div>
+      <div class="faq-item border border-gray-200 rounded-2xl overflow-hidden">
+        <button class="faq-btn w-full flex items-center justify-between p-6 text-right hover:bg-cream transition">
+          <span class="font-bold text-navy-900 text-lg">هل يمكنني التواصل مع المحامي مباشرة؟</span>
+          <span class="faq-icon text-gold-500 text-2xl">+</span>
+        </button>
+        <div class="faq-answer px-6">
+          <p class="text-gray-600 pb-6">نعم، يمكنك التواصل مع الأستاذ عبدالرحمن عبدالصبور مباشرة عبر الهاتف أو الواتساب أو من خلال زيارة المكتب في مواعيد العمل الرسمية.</p>
+        </div>
+      </div>
+      <div class="faq-item border border-gray-200 rounded-2xl overflow-hidden">
+        <button class="faq-btn w-full flex items-center justify-between p-6 text-right hover:bg-cream transition">
+          <span class="font-bold text-navy-900 text-lg">هل تتولون القضايا خارج القاهرة؟</span>
+          <span class="faq-icon text-gold-500 text-2xl">+</span>
+        </button>
+        <div class="faq-answer px-6">
+          <p class="text-gray-600 pb-6">نعم، نتولى القضايا في جميع محافظات جمهورية مصر العربية، ولدينا شبكة واسعة من المحامين المتعاونين في مختلف المحافظات لضمان تغطية شاملة.</p>
+        </div>
+      </div>
+      <div class="faq-item border border-gray-200 rounded-2xl overflow-hidden">
+        <button class="faq-btn w-full flex items-center justify-between p-6 text-right hover:bg-cream transition">
+          <span class="font-bold text-navy-900 text-lg">ما هي مدة القضية عادةً؟</span>
+          <span class="faq-icon text-gold-500 text-2xl">+</span>
+        </button>
+        <div class="faq-answer px-6">
+          <p class="text-gray-600 pb-6">تختلف مدة القضية حسب نوعها ودرجة التقاضي. بعض القضايا البسيطة تُنجز في أسابيع، بينما القضايا المعقدة قد تستغرق عدة أشهر. نحرص دائماً على الإسراع في الإجراءات.</p>
+        </div>
+      </div>
+      <div class="faq-item border border-gray-200 rounded-2xl overflow-hidden">
+        <button class="faq-btn w-full flex items-center justify-between p-6 text-right hover:bg-cream transition">
+          <span class="font-bold text-navy-900 text-lg">هل تحافظون على سرية معلومات العملاء؟</span>
+          <span class="faq-icon text-gold-500 text-2xl">+</span>
+        </button>
+        <div class="faq-answer px-6">
+          <p class="text-gray-600 pb-6">بالتأكيد، السرية المهنية هي أساس عملنا. جميع معلومات العملاء محمية بموجب قانون المحاماة ونلتزم بأعلى معايير السرية في التعامل مع أي قضية.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-24 navy-gradient relative overflow-hidden">
+  <div class="absolute top-0 right-0 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl"></div>
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="text-center mb-16 section-fade">
+      <div class="text-gold-500 font-bold mb-3 tracking-wider">تواصل معنا</div>
+      <h2 class="font-amiri text-4xl lg:text-5xl font-bold text-white mb-4">احجز استشارتك الآن</h2>
+      <div class="divider mx-auto"></div>
+      <p class="text-gray-400 mt-6 max-w-2xl mx-auto text-lg">نحن هنا لمساعدتك. تواصل معنا اليوم للحصول على استشارة قانونية متخصصة</p>
+    </div>
+    <div class="grid lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-1 space-y-6 section-fade">
+        <div class="bg-navy-800 border border-gold-500/20 rounded-2xl p-6 flex items-start gap-4">
+          <div class="w-14 h-14 rounded-xl gold-gradient flex items-center justify-center flex-shrink-0">
+            <svg class="w-7 h-7 text-navy-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div>
+            <h3 class="text-white font-bold text-lg mb-1">العنوان</h3>
+            <p class="text-gray-400">15 شارع التحرير، وسط البلد، القاهرة، مصر</p>
+          </div>
+        </div>
+        <div class="bg-navy-800 border border-gold-500/20 rounded-2xl p-6 flex items-start gap-4">
+          <div class="w-14 h-14 rounded-xl gold-gradient flex items-center justify-center flex-shrink-0">
+            <svg class="w-7 h-7 text-navy-900" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </div>
+          <div>
+            <h3 class="text-white font-bold text-lg mb-1">الهاتف</h3>
+            <p class="text-gray-400" dir="ltr">+20 100 123 4567</p>
+            <p class="text-gray-400" dir="ltr">+20 2 2345 6789</p>
+          </div>
+        </div>
+        <div class="bg-navy-800 border border-gold-500/20 rounded-2xl p-6 flex items-start gap-4">
+          <div class="w-14 h-14 rounded-xl gold-gradient flex items-center justify-center flex-shrink-0">
+            <svg class="w-7 h-7 text-navy-900" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <div>
+            <h3 class="text-white font-bold text-lg mb-1">البريد الإلكتروني</h3>
+            <p class="text-gray-400">info@abdelsabour-law.com</p>
+          </div>
+        </div>
+        <div class="bg-navy-800 border border-gold-500/20 rounded-2xl p-6 flex items-start gap-4">
+          <div class="w-14 h-14 rounded-xl gold-gradient flex items-center justify-center flex-shrink-0">
+            <svg class="w-7 h-7 text-navy-900" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+          </div>
+          <div>
+            <h3 class="text-white font-bold text-lg mb-1">ساعات العمل</h3>
+            <p class="text-gray-400">السبت - الخميس: 9 ص - 6 م</p>
+            <p class="text-gray-400">الجمعة: مغلق</p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-2 section-fade">
+        <form id="contactForm" class="bg-white rounded-2xl p-8 shadow-2xl">
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label class="block text-navy-900 font-bold mb-2">الاسم الكامل *</label>
+              <input type="text" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-gold-500 focus:outline-none transition" placeholder="أدخل اسمك الكامل" />
+            </div>
+            <div>
+              <label class="block text-navy-900 font-bold mb-2">رقم الهاتف *</label>
+              <input type="tel" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-gold-500 focus:outline-none transition" placeholder="01xxxxxxxxx" />
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label class="block text-navy-900 font-bold mb-2">البريد الإلكتروني</label>
+              <input type="email" class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-gold-500 focus:outline-none transition" placeholder="example@email.com" />
+            </div>
+            <div>
+              <label class="block text-navy-900 font-bold mb-2">نوع القضية *</label>
+              <select required class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-gold-500 focus:outline-none transition bg-white">
+                <option value="">اختر نوع القضية</option>
+                <option>قانون جنائي</option>
+                <option>أحوال شخصية</option>
+                <option>قانون تجاري</option>
+                <option>قانون عقاري</option>
+                <option>قانون عمالي</option>
+                <option>قانون إداري</option>
+                <option>استشارة عامة</option>
+              </select>
+            </div>
+          </div>
+          <div class="mb-6">
+            <label class="block text-navy-900 font-bold mb-2">تفاصيل القضية *</label>
+            <textarea required rows="5" class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-gold-500 focus:outline-none transition resize-none" placeholder="اشرح قضيتك بإيجاز..."></textarea>
+          </div>
+          <button type="submit" class="w-full gold-gradient text-navy-900 font-bold py-4 rounded-lg text-lg hover:shadow-xl hover:shadow-gold-500/30 transition flex items-center justify-center gap-2">
+            <span>إرسال الطلب</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+          </button>
+          <div id="formSuccess" class="hidden mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-center">
+            ✓ تم إرسال طلبك بنجاح! سنتواصل معك خلال 24 ساعة.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-navy-900 text-white pt-16 pb-8 border-t-4 border-gold-500">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 rounded-lg gold-gradient flex items-center justify-center">
+            <svg class="w-7 h-7 text-navy-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7v2h20V7L12 2zM4 11v7h2v-7H4zm6 0v7h2v-7h-2zm6 0v7h2v-7h-2zM2 20v2h20v-2H2z"/></svg>
+          </div>
+          <div>
+            <div class="font-bold text-lg">عبدالرحمن عبدالصبور</div>
+            <div class="text-gold-500 text-xs">محامٍ ومستشار قانوني</div>
+          </div>
+        </div>
+        <p class="text-gray-400 leading-relaxed mb-4">مكتب محاماة واستشارات قانونية يقدم خدمات قانونية متكاملة بأعلى معايير الاحترافية والسرية.</p>
+        <div class="flex gap-3">
+          <a href="#" class="w-10 h-10 rounded-lg bg-navy-800 hover:bg-gold-500 hover:text-navy-900 flex items-center justify-center transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-lg bg-navy-800 hover:bg-gold-500 hover:text-navy-900 flex items-center justify-center transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-lg bg-navy-800 hover:bg-gold-500 hover:text-navy-900 flex items-center justify-center transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-lg bg-navy-800 hover:bg-gold-500 hover:text-navy-900 flex items-center justify-center transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.054 10.054 0 01-3.127 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-bold text-lg mb-4 text-gold-500">روابط سريعة</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="#home" class="hover:text-gold-500 transition">الرئيسية</a></li>
+          <li><a href="#about" class="hover:text-gold-500 transition">من نحن</a></li>
+          <li><a href="#services" class="hover:text-gold-500 transition">التخصصات</a></li>
+          <li><a href="#testimonials" class="hover:text-gold-500 transition">آراء العملاء</a></li>
+          <li><a href="#faq" class="hover:text-gold-500 transition">الأسئلة الشائعة</a></li>
+          <li><a href="#contact" class="hover:text-gold-500 transition">اتصل بنا</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-lg mb-4 text-gold-500">التخصصات</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="#services" class="hover:text-gold-500 transition">القانون الجنائي</a></li>
+          <li><a href="#services" class="hover:text-gold-500 transition">الأحوال الشخصية</a></li>
+          <li><a href="#services" class="hover:text-gold-500 transition">القانون التجاري</a></li>
+          <li><a href="#services" class="hover:text-gold-500 transition">القانون العقاري</a></li>
+          <li><a href="#services" class="hover:text-gold-500 transition">القانون العمالي</a></li>
+          <li><a href="#services" class="hover:text-gold-500 transition">القانون الإداري</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-lg mb-4 text-gold-500">النشرة البريدية</h4>
+        <p class="text-gray-400 mb-4">اشترك لتصلك آخر المقالات القانونية والأخبار</p>
+        <form class="flex flex-col gap-3">
+          <input type="email" placeholder="بريدك الإلكتروني" class="px-4 py-3 bg-navy-800 border border-gold-500/20 rounded-lg focus:border-gold-500 focus:outline-none text-white" />
+          <button type="button" class="gold-gradient text-navy-900 font-bold py-3 rounded-lg hover:shadow-lg transition">اشترك الآن</button>
+        </form>
+      </div>
+    </div>
+    <div class="border-t border-gold-500/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-gray-400 text-sm">© 2026 مكتب المحامي عبدالرحمن عبدالصبور. جميع الحقوق محفوظة.</p>
+      <div class="flex gap-6 text-sm text-gray-400">
+        <a href="#" class="hover:text-gold-500 transition">سياسة الخصوصية</a>
+        <a href="#" class="hover:text-gold-500 transition">الشروط والأحكام</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/201001234567" target="_blank" class="fixed bottom-6 left-6 z-50 w-16 h-16 rounded-full bg-green-500 hover:bg-green-600 flex items-center justify-center shadow-2xl pulse-gold transition">
+  <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Back to Top -->
+<button id="backToTop" class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full gold-gradient text-navy-900 flex items-center justify-center shadow-2xl opacity-0 invisible transition-all hover:scale-110">
+  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+</button>
+
+<script>
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      navbar.classList.add('navy-gradient', 'shadow-2xl');
+      navbar.classList.remove('bg-transparent');
+    } else {
+      navbar.classList.remove('navy-gradient', 'shadow-2xl');
+      navbar.classList.add('bg-transparent');
+    }
+  });
+
+  // Mobile menu
+  const mobileBtn = document.getElementById('mobileBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  mobileBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+  });
+
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.section-fade').forEach(el => observer.observe(el));
+
+  // Counter animation
+  const counters = document.querySelectorAll('.counter');
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counter = entry.target;
+        const target = +counter.getAttribute('data-target');
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+        const update = () => {
+          current += step;
+          if (current < target) {
+            counter.textContent = Math.ceil(current) + (target === 98 ? '' : '+');
+            requestAnimationFrame(update);
+          } else {
+            counter.textContent = target + (target === 98 ? '%' : '+');
+          }
+        };
+        update();
+        counterObserver.unobserve(counter);
+      }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(c => counterObserver.observe(c));
+
+  // FAQ
+  document.querySelectorAll('.faq-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const answer = item.querySelector('.faq-answer');
+      const isOpen = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('active');
+        i.querySelector('.faq-answer').classList.remove('open');
+      });
+      if (!isOpen) {
+        item.classList.add('active');
+        answer.classList.add('open');
+      }
+    });
+  });
+
+  // Contact form
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.getElementById('formSuccess').classList.remove('hidden');
+    form.reset();
+    setTimeout(() => {
+      document.getElementById('formSuccess').classList.add('hidden');
+    }, 5000);
+  });
+
+  // Back to top
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+      backToTop.classList.remove('opacity-0', 'invisible');
+    } else {
+      backToTop.classList.add('opacity-0', 'invisible');
+    }
+  });
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>
